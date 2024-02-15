@@ -6,8 +6,9 @@ import {
 } from 'react-router-dom'
 import ErrorPage from "./ErrorPage.jsx";
 import Index from "./routes/Index";
+import Login from "./routes/Login";
+import Notes from "./routes/Notes";
 import Root from "./routes/Root";
-import './index.css'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Index />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/notes",
+        element: <Notes />
       }
     ]
   },
