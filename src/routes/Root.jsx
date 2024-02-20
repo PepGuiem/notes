@@ -20,6 +20,9 @@ export default function Root() {
                   <li className="nav-item">
                     <Link className="nav-link" to="/register">Register</Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/changePassword">Change Password</Link>
+                  </li>
                 </ul>
               </div>
             </div>
