@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
+import HomePage from './routes/HomePage.jsx';
 import ErrorPage from "./ErrorPage.jsx";
 import Login from "./routes/Login";
 import Register from "./routes/Register"
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <HomePage />
+      },
+      {
+        path: "/notes",
         element: <Notes />
       },
       {
