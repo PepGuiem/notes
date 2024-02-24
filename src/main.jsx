@@ -11,6 +11,7 @@ import Register from "./routes/Register"
 import Notes from "./routes/Notes";
 import Root from "./routes/Root";
 import ChangePassword from './routes/ChangePassword';
+import AddNote from './routes/AddNote.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/changePassword",
         element: <ChangePassword />
+      },
+      {
+        path: "/addNote",
+        element: <AddNote />
       }
     ]
   },
