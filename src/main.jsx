@@ -12,6 +12,8 @@ import Notes from "./routes/Notes";
 import Root from "./routes/Root";
 import ChangePassword from './routes/ChangePassword';
 import AddNote from './routes/AddNote.jsx'
+import ViewNote from './routes/ViewNote.jsx';
+import ModifyNote from './routes/ModifyNote.jsx'; 
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: "/addNote",
         element: <AddNote />
+      },
+      {
+        path: "/notes/:id",
+        element: <ViewNote />
+      },
+      {
+        path: "/notesModify/:id",
+        element: <ModifyNote />
       }
     ]
   },
