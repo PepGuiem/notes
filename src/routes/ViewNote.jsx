@@ -26,6 +26,7 @@ export default function ViewNote() {
                         <p className="card-text">Created at: {note.createdAt}</p>
                         <p className="card-text">Modified at: {note.modifiedAt}</p>
                         <p className="card-text">{note.isPublic ? "Public" : "Private"}</p>
+                        <p><Link to={"/notes/" + id + "/files/"} >View Files</Link></p>
                     </div>
                 </div>
             </div>
