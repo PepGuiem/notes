@@ -43,6 +43,7 @@ export async function doFetchGetNotes (url){
     }
 
   export async function doFetchAddNote (url, title, content, privcity, type){
+    if(type == true) content = "";
     var data = {
         title : title,
         body : content,
@@ -71,12 +72,12 @@ export async function doFetchGetNotes (url){
       }
     }
 
-    export async function doFetchModifyNote (url, title, content, privcity, ){
+    export async function doFetchModifyNote (url, title, content, privcity, type ){
       var data = {
           title : title,
           body : content,
-          isPublic : false,
-          isVoiceNote : false
+          isPublic : privcity,
+          isVoiceNote : type
       }
       try {
           const response = await fetch(url, {
@@ -99,3 +100,5 @@ export async function doFetchGetNotes (url){
           return false;
         }
       }
+
+    
